@@ -1,0 +1,69 @@
+.my-row {
+  display: flex;
+  justify-content: center;
+}
+
+.node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*border: 1px solid #000;*/
+  border: 1px solid gray;
+  /*border-radius: 1px;*/
+}
+
+.start {
+  background-color: orange;
+}
+.start:hover {
+  cursor: pointer;
+}
+
+.finish {
+  background-color: yellow;
+}
+.finish:hover {
+  cursor: pointer;
+}
+
+.closed {
+  animation-name: closed;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes closed {
+  from {
+    background-color: cyan;
+    transform: scale(.5);
+  }
+  to {
+    background-color: dodgerblue;
+    transform: scale(1);
+  }
+}
+
+.path {
+  border: none;
+  animation-name: path;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes path {
+  from {
+    background-color: yellow;
+    transform: scale(.5);
+  }
+  to {
+    background-color: orange;
+    transform: scale(1);
+  }
+}
+
+.wall {
+  border: none;
+  background-color: black;
+}
